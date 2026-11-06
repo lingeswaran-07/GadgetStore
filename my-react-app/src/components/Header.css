@@ -1,0 +1,140 @@
+.head {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping for better responsiveness */
+  position: fixed; /* Fixes the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures the header spans the full width */
+  z-index: 1000; /* Places the header above other content */
+}
+
+.head h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* Flex container for the menu items */
+.head ul {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allows the menu to wrap on smaller screens */
+}
+
+.head ul li {
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Styling the links */
+.head a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Styling the login link */
+.lo {
+  color:limegreen;
+  cursor: pointer;
+  width: 80px;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+/* Styling the cart item counter */
+.car {
+  display: inline-block;
+  background-color: #ff9900;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Dropdown menu */
+.head ul li .dropdown {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  background-color: #444;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style-type: none;
+  padding: 10px;
+  top: 100%; /* Position dropdown below the parent */
+  left: 0;
+  width: max-content;
+  border-radius: 8px; /* Rounded corners for a polished look */
+}
+
+/* Dropdown menu items */
+.head ul li .dropdown li {
+  padding: 8px 16px;
+  white-space: nowrap;
+  background-color: #555; /* Base background color */
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.head ul li .dropdown li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+}
+
+.head ul li .dropdown li:hover {
+  background-color: #ff6600; /* Highlight color on hover */
+}
+
+.head ul li:hover .dropdown {
+  display: block; /* Show dropdown when hovered */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .head {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .head h1 {
+      margin-bottom: 10px;
+  }
+
+  .head ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .head ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .head ul li .dropdown {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+  }
+
+  .head ul li .dropdown li {
+      padding: 10px 20px;
+  }
+}
+
+/* Add padding to the body to prevent content overlap */
+body {
+  padding-top: 70px; /* Adjust based on the header height */
+}
