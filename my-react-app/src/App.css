@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+.gad-container,
+.mobile-container,
+.watch-container ,
+.earbuds-container,
+.laptop-container,
+.charger-container,
+.watch-container,
+.gaming-gadget-container{ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.gadget-card,
+.mobile-card,
+.watch-card,
+.charger-card,
+.earbuds-card,
+.laptop-card,
+.gaming-gadget-card { /* Apply common styles for both gadget and mobile cards */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gadget-card:hover,
+.mobile-card:hover ,
+.watch-card:hover,
+.earbuds-card:hover,
+.charger-card:hover,
+.laptop-card:hover,
+.gaming-gadget-card:hover{ /* Apply hover effects to both cards */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gadget-card img,
+.mobile-card img ,
+.watch-card img,
+.charger-card img,
+.earbuds-card img,
+.laptop-card img,
+.gaming-gadget-card img{ /* Apply same image styling for both cards */
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gadget-card p,
+.mobile-card p 
+.watch-card p,
+.charger-card p,
+.earbuds-card p,
+.laptop-card p,
+.gaming-gadget-card p{ /* Apply same paragraph styling for both cards */
+  margin: 10px 0;
+}
+
+/* Button Styles */
+.gadget-card .btn1,
+.gadget-card .btn2,
+.gadget-card .btn3,
+.gaming-gadget-card .btn1,
+.gaming-gadget-card .btn2,
+.gaming-gadget-card .btn3,
+.laptop-card .btn1,
+.laptop-card .btn2,
+.laptop-card .btn3,
+.earbuds-card .btn1,
+.earbuds-card .btn2,
+.earbuds-card .btn3,
+.charger-card .btn1,
+.charger-card .btn2,
+.charger-card .btn3,
+.mobile-card .btn1,
+.mobile-card .btn2,
+.mobile-card .btn3 ,
+.watch-card.btn1,
+.watch-card.btn2,
+.watch-card.btn3{ /* Include buttons in both card types */
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 5px 0;
+}
+
+.gadget-card .btn1:hover,
+.mobile-card .btn1:hover,
+.watch-card.btn1:hover,
+.earbuds-card .btn1:hover,
+.charger-card .btn1:hover,
+.laptop-card .btn1:hover,
+.gaming-gadget-card .btn1:hover{
+  background-color: #32e600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gadget-card .btn2:hover,
+.mobile-card .btn2:hover,
+.watch-card.btn2:hover ,
+.earbuds-card .btn2:hover,
+.charger-card .btn2:hover,
+.laptop-card .btn2:hover,
+.gaming-gadget-card.btn2:hover{
+  background-color: blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gadget-card .btn3:hover,
+.mobile-card .btn3:hover ,
+.watch-card .btn3:hover,
+.earbuds-card .btn3:hover,
+.charger-card .btn3:hover,
+.laptop-card .btn3:hover,
+.gaming-gadget-card.btn3:hover{
+  background-color: #ea2e0c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gadget-card .btn1:active,
+.gadget-card .btn2:active,
+.gadget-card .btn3:active,
+.mobile-card .btn1:active,
+.mobile-card .btn2:active,
+.mobile-card .btn3:active ,
+.laptop-card .btn1:active,
+.laptop-card .btn2:active,
+.laptop-card .btn3:active,
+.earbuds-card .btn1:active,
+.earbuds-card .btn2:active,
+.earbuds-card .btn3:active,
+.gaming-gadget-card.btn1:active,
+.gaming-gadget-card.btn2:active,
+.gaming-gadget-card.btn3:active,
+.charger-card .btn1:active,
+.charger-card .btn2:active,
+.charger-card .btn3:active,
+.watch-card.btn1:active,
+.watch-card.btn2:active,
+.watch-card.btn3:active{
+  background-color: #cc7a00;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.gadget-card .btn1:focus,
+.gadget-card .btn2:focus,
+.gadget-card .btn3:focus,
+.mobile-card .btn1:focus,
+.mobile-card .btn2:focus,
+.mobile-card .btn3:focus ,
+.laptop-card .btn1:focus,
+.laptop-card .btn2:focus,
+.laptop-card .btn3:focus,
+.charger-card .btn1:focus,
+.charger-card .btn2:focus,
+.charger-card .btn3:focus,
+.earbuds-card .btn1:focus,
+.earbuds-card .btn2:focus,
+.earbuds-card .btn3:focus,
+.gaming-gadget-card.btn1:focus,
+.gaming-gadget-card.btn2:focus,
+.gaming-gadget-card.btn3:focus,
+.watch-card.btn1:focus,
+.watch-card.btn2:focus,
+.watch-card.btn3:focus{
+  outline: none;
+}
+
+
+.price{
+  color:rgb(235, 19, 19);
+}
